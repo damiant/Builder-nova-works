@@ -289,23 +289,24 @@ export default function MyReservations() {
                           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                             {/* Reservation Info */}
                             <div className="flex-1">
-                              <div className="flex items-start justify-between mb-4">
-                                <div>
-                                  <div className="flex items-center gap-3 mb-2">
-                                    <div className="flex items-center">
+                              {/* Header Section - Mobile Optimized */}
+                              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-3 mb-2 flex-wrap">
+                                    <div className="flex items-center min-w-0 flex-1">
                                       {reservation.type === "hotel" ? (
-                                        <Bed className="h-5 w-5 text-napoleon-400 mr-2" />
+                                        <Bed className="h-5 w-5 text-napoleon-400 mr-2 flex-shrink-0" />
                                       ) : (
-                                        <ChefHat className="h-5 w-5 text-napoleon-400 mr-2" />
+                                        <ChefHat className="h-5 w-5 text-napoleon-400 mr-2 flex-shrink-0" />
                                       )}
-                                      <h3 className="text-xl font-luxury font-bold text-foreground">
+                                      <h3 className="text-lg sm:text-xl font-luxury font-bold text-foreground truncate">
                                         {reservation.property}
                                       </h3>
                                     </div>
                                     <Badge
-                                      className={getStatusColor(
+                                      className={`${getStatusColor(
                                         reservation.status,
-                                      )}
+                                      )} flex-shrink-0`}
                                     >
                                       {getStatusIcon(reservation.status)}
                                       <span className="ml-1 capitalize">
@@ -315,19 +316,22 @@ export default function MyReservations() {
                                   </div>
 
                                   <div className="flex items-center text-muted-foreground mb-2">
-                                    <MapPin className="h-4 w-4 mr-2" />
-                                    {reservation.location}
+                                    <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
+                                    <span className="truncate">
+                                      {reservation.location}
+                                    </span>
                                   </div>
 
-                                  <div className="text-sm text-napoleon-300 mb-3">
+                                  <div className="text-sm text-napoleon-300 mb-3 break-all sm:break-normal">
                                     Confirmation:{" "}
                                     {reservation.confirmationNumber}
                                   </div>
                                 </div>
 
-                                <div className="text-right">
-                                  <div className="text-2xl font-bold text-napoleon-300">
-                                    ${reservation.totalAmount}
+                                {/* Price Section - Mobile Optimized */}
+                                <div className="flex-shrink-0 text-right sm:text-right">
+                                  <div className="text-xl sm:text-2xl font-bold text-napoleon-300">
+                                    ${reservation.totalAmount.toLocaleString()}
                                   </div>
                                   <div className="text-sm text-muted-foreground">
                                     Total
