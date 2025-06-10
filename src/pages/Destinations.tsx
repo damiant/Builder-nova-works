@@ -578,7 +578,7 @@ export default function Destinations() {
           <Card className="casino-card">
             <CardContent className="p-6">
               <div className="aspect-video">
-                <InteractiveMap
+                <MapWrapper
                   destinations={destinations}
                   selectedDestination={selectedDestination}
                   onDestinationSelect={setSelectedDestination}
