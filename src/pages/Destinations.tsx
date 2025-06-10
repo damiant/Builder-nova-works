@@ -244,6 +244,7 @@ export default function Destinations() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
   const [sortBy, setSortBy] = useState("rating");
+  const [selectedDestination, setSelectedDestination] = useState<string>("");
 
   const filteredDestinations = destinations
     .filter((destination) => {
