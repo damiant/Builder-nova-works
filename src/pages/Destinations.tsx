@@ -377,19 +377,33 @@ export default function Destinations() {
               >
                 <Card className="casino-card h-full hover:border-napoleon-400/40 transition-all duration-300 group cursor-pointer">
                   {/* Destination Image */}
-                  <div className="aspect-video bg-gradient-to-br from-napoleon-400/20 to-casino-800 relative overflow-hidden rounded-t-xl">
-                    <div className="absolute inset-0 bg-gradient-to-t from-casino-900/80 to-transparent" />
+                  <div className="aspect-video relative overflow-hidden rounded-t-xl">
+                    <img
+                      src={destination.image}
+                      alt={`${destination.name}, ${destination.state}`}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        // Fallback to gradient background if image fails to load
+                        e.currentTarget.style.display = "none";
+                        e.currentTarget.parentElement!.classList.add(
+                          "bg-gradient-to-br",
+                          "from-napoleon-400/20",
+                          "to-casino-800",
+                        );
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-casino-900/80 via-casino-900/20 to-transparent" />
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-                      <Badge className="bg-napoleon-400/20 text-napoleon-300 border-napoleon-400/30">
+                      <Badge className="bg-casino-900/80 backdrop-blur-sm text-napoleon-300 border-napoleon-400/30">
                         <Star className="h-3 w-3 mr-1 fill-current" />
                         {destination.rating}
                       </Badge>
-                      <Badge className="bg-casino-800/80 text-foreground border-napoleon-400/30">
+                      <Badge className="bg-casino-900/80 backdrop-blur-sm text-foreground border-napoleon-400/30">
                         {destination.region}
                       </Badge>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-2xl font-luxury font-bold text-foreground mb-1">
+                      <h3 className="text-2xl font-luxury font-bold text-white mb-1 drop-shadow-lg">
                         {destination.name}
                       </h3>
                       <div className="flex items-center text-sm text-napoleon-300">
