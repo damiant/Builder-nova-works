@@ -54,7 +54,8 @@ const destinations: Destination[] = [
     rating: 4.9,
     rooms: 450,
     restaurants: 8,
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=Las Vegas strip casino luxury",
     description:
       "The crown jewel of Napoleon Casino Group, featuring world-class gaming, luxury suites, and award-winning dining on the famous Las Vegas Strip.",
     highlights: [
@@ -87,7 +88,8 @@ const destinations: Destination[] = [
     rating: 4.8,
     rooms: 320,
     restaurants: 6,
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=Atlantic City boardwalk casino ocean",
     description:
       "Oceanfront luxury casino resort with pristine beaches, boardwalk entertainment, and East Coast's finest gaming experience.",
     highlights: [
@@ -115,7 +117,8 @@ const destinations: Destination[] = [
     rating: 4.7,
     rooms: 280,
     restaurants: 5,
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=New Orleans French Quarter casino jazz",
     description:
       "Immerse yourself in the vibrant culture of the Big Easy with authentic Creole cuisine, jazz music, and Southern hospitality.",
     highlights: [
@@ -143,7 +146,8 @@ const destinations: Destination[] = [
     rating: 4.6,
     rooms: 200,
     restaurants: 4,
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=Biloxi beach casino gulf coast",
     description:
       "Gulf Coast gaming paradise with beautiful beaches, fresh seafood, and warm Southern charm.",
     highlights: [
@@ -171,7 +175,8 @@ const destinations: Destination[] = [
     rating: 4.5,
     rooms: 180,
     restaurants: 3,
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=Reno Nevada casino mountains lake tahoe",
     description:
       "The biggest little city in the world offers mountain views, outdoor adventures, and authentic Nevada gaming.",
     highlights: [
@@ -204,7 +209,8 @@ const destinations: Destination[] = [
     rating: 4.4,
     rooms: 150,
     restaurants: 3,
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=Tunica Mississippi casino river delta",
     description:
       "Delta region gaming destination with Southern comfort, blues music, and Mississippi River charm.",
     highlights: [
