@@ -569,17 +569,13 @@ export default function Destinations() {
           </motion.div>
 
           <Card className="casino-card">
-            <CardContent className="p-8">
-              <div className="aspect-video bg-gradient-to-br from-napoleon-400/10 to-casino-800/20 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-napoleon-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-luxury font-bold text-foreground mb-2">
-                    Interactive Map Coming Soon
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Explore all our locations with our interactive property map
-                  </p>
-                </div>
+            <CardContent className="p-6">
+              <div className="aspect-video">
+                <InteractiveMap
+                  destinations={destinations}
+                  selectedDestination={selectedDestination}
+                  onDestinationSelect={setSelectedDestination}
+                />
               </div>
             </CardContent>
           </Card>
