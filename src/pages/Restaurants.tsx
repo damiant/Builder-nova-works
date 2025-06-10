@@ -42,7 +42,8 @@ const restaurants = [
     location: "Las Vegas, NV",
     rating: 4.9,
     priceRange: "$$$$",
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=French fine dining beef wellington elegant plating",
     description:
       "An elegant fine dining experience featuring contemporary French cuisine with a modern twist.",
     features: ["Wine Pairing", "Private Dining", "Chef's Table"],
@@ -58,7 +59,8 @@ const restaurants = [
     location: "Atlantic City, NJ",
     rating: 4.8,
     priceRange: "$$$",
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=dry aged ribeye steak grilled perfection",
     description:
       "Premium aged steaks and fresh seafood in a sophisticated atmosphere.",
     features: ["Dry-Aged Beef", "Raw Bar", "Extensive Wine List"],
@@ -74,7 +76,8 @@ const restaurants = [
     location: "New Orleans, LA",
     rating: 4.7,
     priceRange: "$$$",
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=wood fired pizza margherita fresh basil",
     description:
       "Authentic Italian flavors with handmade pasta and wood-fired pizzas.",
     features: ["Wood-Fired Oven", "Fresh Pasta", "Gelato Bar"],
@@ -90,7 +93,8 @@ const restaurants = [
     location: "Las Vegas, NV",
     rating: 4.6,
     priceRange: "$$",
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=sushi platter sashimi tuna salmon elegant presentation",
     description:
       "Contemporary Asian fusion cuisine with sushi bar and teppanyaki grills.",
     features: ["Sushi Bar", "Teppanyaki", "Dim Sum"],
@@ -106,7 +110,8 @@ const restaurants = [
     location: "Biloxi, MS",
     rating: 4.5,
     priceRange: "$$",
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=seafood buffet lobster crab shrimp display",
     description:
       "International buffet featuring over 200 items including seafood, steaks, and desserts.",
     features: ["Seafood Station", "Carving Station", "Dessert Bar"],
@@ -122,7 +127,8 @@ const restaurants = [
     location: "Phoenix, AZ",
     rating: 4.4,
     priceRange: "$$",
-    image: "/placeholder.svg",
+    image:
+      "https://api.webnative.dev/images?query=gourmet burger bacon cheese american classic",
     description:
       "Classic American cuisine with a contemporary twist and outdoor patio dining.",
     features: ["Outdoor Seating", "Sports Bar", "Happy Hour"],
