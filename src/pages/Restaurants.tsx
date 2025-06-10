@@ -287,14 +287,28 @@ export default function Restaurants() {
                 >
                   <Card className="casino-card h-full hover:border-napoleon-400/40 transition-all duration-300 group">
                     {/* Restaurant Image */}
-                    <div className="aspect-video bg-gradient-to-br from-napoleon-400/20 to-casino-800 relative overflow-hidden rounded-t-xl">
-                      <div className="absolute inset-0 bg-gradient-to-t from-casino-900/80 to-transparent" />
+                    <div className="aspect-video relative overflow-hidden rounded-t-xl">
+                      <img
+                        src={restaurant.image}
+                        alt={`Signature dish from ${restaurant.name}`}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          // Fallback to gradient background if image fails to load
+                          e.currentTarget.style.display = "none";
+                          e.currentTarget.parentElement!.classList.add(
+                            "bg-gradient-to-br",
+                            "from-napoleon-400/20",
+                            "to-casino-800",
+                          );
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-casino-900/80 via-casino-900/20 to-transparent" />
                       <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-                        <Badge className="bg-napoleon-400/20 text-napoleon-300 border-napoleon-400/30">
+                        <Badge className="bg-casino-900/80 backdrop-blur-sm text-napoleon-300 border-napoleon-400/30">
                           <CuisineIcon className="h-3 w-3 mr-1" />
                           {restaurant.cuisine}
                         </Badge>
-                        <Badge className="bg-casino-800/80 text-foreground border-napoleon-400/30">
+                        <Badge className="bg-casino-900/80 backdrop-blur-sm text-foreground border-napoleon-400/30">
                           {restaurant.priceRange}
                         </Badge>
                       </div>
@@ -302,11 +316,11 @@ export default function Restaurants() {
                         <div className="flex items-center space-x-2 mb-2">
                           <div className="flex items-center">
                             <Star className="h-4 w-4 text-napoleon-400 fill-current mr-1" />
-                            <span className="text-napoleon-300 font-medium">
+                            <span className="text-white font-medium drop-shadow-lg">
                               {restaurant.rating}
                             </span>
                           </div>
-                          <div className="flex items-center text-sm text-muted-foreground">
+                          <div className="flex items-center text-sm text-napoleon-300">
                             <MapPin className="h-3 w-3 mr-1" />
                             {restaurant.location}
                           </div>
