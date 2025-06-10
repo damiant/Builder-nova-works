@@ -377,7 +377,14 @@ export default function Destinations() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="casino-card h-full hover:border-napoleon-400/40 transition-all duration-300 group cursor-pointer">
+                <Card
+                  className={`casino-card h-full hover:border-napoleon-400/40 transition-all duration-300 group cursor-pointer ${
+                    selectedDestination === destination.id
+                      ? "border-napoleon-400/60 ring-2 ring-napoleon-400/30"
+                      : ""
+                  }`}
+                  onClick={() => setSelectedDestination(destination.id)}
+                >
                   {/* Destination Image */}
                   <div className="aspect-video relative overflow-hidden rounded-t-xl">
                     <img
