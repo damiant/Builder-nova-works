@@ -59,7 +59,14 @@ export default function InteractiveMap({
   selectedDestination,
   onDestinationSelect,
 }: InteractiveMapProps) {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
     // Add custom CSS for markers
     const style = document.createElement("style");
     style.textContent = `
