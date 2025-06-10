@@ -128,7 +128,14 @@ export default function InteractiveMap({
     return () => {
       document.head.removeChild(style);
     };
-  }, []);
+  }, [isClient]);
+
+  // Don't render on server side
+  if (!isClient) {
+    return (
+      <div className="w-full h-full bg-gradient-to-br from-napoleon-400/10 to-casino-800/20 rounded-lg" />
+    );
+  }
 
   // Calculate center of all destinations
   const center = destinations.reduce(
