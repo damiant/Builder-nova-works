@@ -451,7 +451,7 @@ export default function MyReservations() {
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="flex flex-col gap-2 lg:w-48">
+                            <div className="flex flex-col gap-2 w-full sm:w-auto sm:min-w-[200px] lg:w-48">
                               <Button
                                 variant="outline"
                                 size="sm"
