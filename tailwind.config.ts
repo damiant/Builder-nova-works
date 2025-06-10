@@ -167,7 +167,7 @@ export default {
           "linear-gradient(45deg, #0f172a 25%, transparent 25%), linear-gradient(-45deg, #0f172a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #0f172a 75%), linear-gradient(-45deg, transparent 75%, #0f172a 75%)",
       },
       fontFamily: {
-        luxury: ["Playfair Display", "serif"],
+        luxury: ["Poppins", "sans-serif"],
         elegant: ["Inter", "sans-serif"],
       },
     },
