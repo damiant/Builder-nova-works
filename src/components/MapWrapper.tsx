@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
+import SimpleMap from "./SimpleMap";
 
 interface Destination {
   id: string;
